@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="done" translate="label" sortOrder="1000">
+            <label>Doneconnector</label>
+        </tab>
+        <section id="donepaypal" translate="label" sortOrder="130" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Paypal base currency</label>
+            <tab>done</tab>
+            <resource>Done_Done::config_done</resource>
+            <group id="general" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General Configuration</label>
+                <field id="enable" translate="label" type="select" sortOrder="99" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="conversion_rate" translate="label" type="text" sortOrder="199" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Conversion Rate</label>
+                    <comment>base currency to paypal conversion rate</comment>
+                </field>
+                
+                <field id="currency_symbol" translate="label" type="text" sortOrder="199" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Currency Symbol</label>
+                    <comment>currency symbol </comment>
+                </field>
+            </group>
+        </section>
+        
+    </system>
+</config>
